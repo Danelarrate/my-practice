@@ -8,10 +8,10 @@ function Pad({ clip, setNote }) {
     return () => {
       document.removeEventListener("keydown", handleKeyPress);
     };
-  }, []);
+  });
 
   const handleKeyPress = (e) => {
-    if (e.keyCode == clip.keyCode) {
+    if (e.keyCode === clip.keyCode) {
       setNote(clip.text);
       playSound();
     }

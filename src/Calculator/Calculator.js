@@ -23,7 +23,7 @@ function Calculator() {
     if (/[+*-/]/.test(digits[digits.length - 1])) {
       let digitsArr = digits.split("");
 
-      if (digitsArr[digitsArr.length - 1] == operator) {
+      if (digitsArr[digitsArr.length - 1] === operator) {
         digitsArr[digitsArr.length - 1] = operator;
         setDigits(digitsArr.join(""));
       } else {
@@ -36,14 +36,14 @@ function Calculator() {
 
   const igual = () => {
     setDecimal("true");
-    if (result != 0) {
+    if (result !== 0) {
       let filtered = (result + digits)
-        .match(/(\*|\+|\/|-)?(\.|\-)?\d+/g)
+        .match(/(\*|\+|\/|-)?(\.|-)?\d+/g)
         .join("");
       let sum = eval(filtered);
       setResult(sum);
     } else {
-      let filtered = digits.match(/(\*|\+|\/|-)?(\.|\-)?\d+/g).join("");
+      let filtered = digits.match(/(\*|\+|\/|-)?(\.|-)?\d+/g).join("");
       let sum = eval(filtered);
       setResult(eval(sum));
     }
@@ -61,7 +61,7 @@ function Calculator() {
       <section className="container">
         <div style={{ height: "15%" }} className="visor-div">
           <article className="visor" id="calculator-display">
-            {result == 0 ? (digits != 0 ? digits : 0) : result}
+            {result === 0 ? (digits !== 0 ? digits : 0) : result}
           </article>
           <article className="visor">
             <input

@@ -63,18 +63,16 @@ class Pomodoro extends React.Component {
         this.timer(tiempo);
         date = new Date().getTime();
         if (date > nextDate) {
-          {
-            if (this.state.display <= 0 && !onBreakVariable) {
-              onBreakVariable = true;
-              this.setOnBreak(true);
-              this.setDisplay(this.state.rest);
-            } else if (this.state.display <= 0 && onBreakVariable) {
-              onBreakVariable = false;
-              this.setOnBreak(false);
-              this.setDisplay(this.state.session);
-            } else {
-              this.setDisplay(this.state.display - 1);
-            }
+          if (this.state.display <= 0 && !onBreakVariable) {
+            onBreakVariable = true;
+            this.setOnBreak(true);
+            this.setDisplay(this.state.rest);
+          } else if (this.state.display <= 0 && onBreakVariable) {
+            onBreakVariable = false;
+            this.setOnBreak(false);
+            this.setDisplay(this.state.session);
+          } else {
+            this.setDisplay(this.state.display - 1);
           }
 
           nextDate += second;
