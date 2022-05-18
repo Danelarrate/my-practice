@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap");
+.section3 {
+  margin: 0;
+
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+.pomodoro-section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  color: white;
+}
+.buttons-div {
+  font-family: "Orbitron", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+span {
+  font-size: 2vw;
+  font-weight: 700;
+  color: white;
+}
+.items-div {
+  display: flex;
+  justify-content: center;
+}
+.items-div article {
+  position: absolute;
+  background-color: #016bff;
+  padding: 5%;
+  border-radius: 50%;
+  border-top: 3px solid #00cafa;
+}
+.left {
+  z-index: 1;
+  width: 15%;
+  height: 20%;
+  left: 10%;
+  top: 5%;
+  border-left: 0.8vh solid #00cafa;
+}
+.right {
+  z-index: 1;
+  width: 15%;
+  right: 10%;
+  height: 20%;
+  top: 5%;
+  border-right: 0.8vh solid #00cafa;
+}
+.display-div {
+  position: absolute;
+  top: 25%;
+  left: 17.5%;
+  height: 70%;
+  width: 65%;
+  background-color: #016bff;
+  border-radius: 50%;
+  border: 0.8vh solid #00cafa;
+}
+.display-article1 {
+  display: flex;
+  flex-direction: column;
+  height: 60%;
+  justify-content: center;
+}
+.display-article1 h1 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 3vw;
+}
+.display-article1 h2 {
+  font-size: 2.5vw;
+}
+.display-article2 {
+  height: 40%;
+}
+.display-article2 button {
+  padding: 3%;
+  margin: 2%;
+  font-size: 2vw;
+}
+
+/* From uiverse.io */
+.section3 button {
+  padding: 10%;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+#reset,
+#start_stop {
+  padding: 3vw;
+}
+.section3 button:hover {
+  background-color: #0034d4;
+  border: 0.5vh solid #fcfefc;
+  box-shadow: 0px 1.6vh 2vh rgba(1, 201, 252, 1);
+  color: #fff;
+  transform: translateY(-8%);
+}
+.section3 button:active {
+  transform: translateY(-1px);
+}

@@ -1,0 +1,37 @@
+.DM-display {
+  text-align: center;
+}
+
+.DM-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+#display {
+  width: 50%;
+}
+.pad {
+  width: 50%;
+  height: 400px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 2px;
+  grid-row-gap: 2px;
+}
+.drum-pad {
+  width: 1fr;
+  height: 1fr;
+  background-color: white;
+  color: black;
+  text-align: center;
+}
+.active {
+  background-color: pink;
+  color: pink;
+}
