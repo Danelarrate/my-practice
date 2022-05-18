@@ -7,7 +7,7 @@ class Pomodoro extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      session: 20 * 60,
+      session: 25 * 60,
       rest: 5 * 60,
       display: 25 * 60,
       onBreak: false,
