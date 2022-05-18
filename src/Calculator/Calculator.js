@@ -1,3 +1,4 @@
+/* eslint no-eval: 0 */
 import numbers from "./numbers";
 import { useState } from "react";
 import "./Calculator.css";
